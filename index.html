@@ -57,8 +57,8 @@
     <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a> -->
     <!-- <div class=""> -->
 
-      <div style="width : 75%; " >
-        <div class="">
+      <div style="width : 80%; " >
+        <div class="" style="width : -100%; display: none; ">
 
         </div>
         <div class="w3-dropdown-hover w3-hide-small cent">
@@ -71,15 +71,16 @@
           <a href="#pest_info" class="w3-button" >PEST INFO</a>
         </div>
         <div class="w3-dropdown-hover w3-hide-small cent">
-          <a class="w3-button" title="Notifications">GALLERY <i class="fa fa-caret-down"></i></a>
-          <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+          <a href="#gallery"  class="w3-button" title="Notifications">GALLERY</a>
+          <!-- <a class="w3-button" title="Notifications">GALLERY <i class="fa fa-caret-down"></i></a> -->
+          <!-- <div class="w3-dropdown-content w3-card-4 w3-bar-block">
             <a href="#" class="w3-bar-item w3-button">Link</a>
             <a href="#" class="w3-bar-item w3-button">Link</a>
             <a href="#" class="w3-bar-item w3-button">Link</a>
-          </div>
+          </div> -->
         </div>
         <div class="w3-dropdown-hover w3-hide-small cent">
-          <a class="w3-button" >ABOUT US</a>
+          <a href="#about" class="w3-button" >ABOUT US</a>
         </div>
         <div class="w3-dropdown-hover w3-hide-small cent">
           <a class="w3-button" href="#contact" >CONTACT</a>
@@ -134,10 +135,10 @@
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none;" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
-  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
-  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
-  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">PRICING</a>
+  <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button">SERVICES</a>
+  <a href="#pest_info" onclick="w3_close()" class="w3-bar-item w3-button">PEST INFO</a>
+  <a href="#gallery" onclick="w3_close()" class="w3-bar-item w3-button">GALLERY</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT US</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
 <!-- ////////////// -->
@@ -168,6 +169,7 @@
   <img class="mySlides" src="images/main_home2.png" style="width:100%">
   <img class="mySlides" src="images/bar_pic.png" style="width:100%">
   <img class="mySlides" src="images/bar_pic.png" style="width:100%">
+
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
 </div> -->
@@ -265,7 +267,7 @@ function carousel() {
 <!-- About Section -->
 <div id="services" class="w3-container" style="padding:128px 16px" id="about">
   <h3 class="w3-center">ABOUT THE COMPANY</h3>
-  <p class="w3-center w3-large">Key features of our company</p>
+  <p class="w3-center w3-large">Our work includes termination of</p>
   <div class="w3-row-padding w3-center" style="margin-top:64px">
     <div class="w3-quarter">
       <i class="fa  w3-margin-bottom w3-jumbo w3-center"><img id="insect" src="images/6.png" alt="">  </i>
@@ -324,7 +326,7 @@ function carousel() {
     <div id="pest_info" class="w3-col m6">
       <h3>RS Pest Control.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod<br>tempor incididunt ut labore et dolore.</p>
-      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
+      <p><a href="#work" class="w3-button w3-black"><i class="fa fa-th"> </i> View Our Works</a></p>
     </div>
     <div class="w3-col m6">
       <img class="w3-image  w3-center" style="float : right;" src="images/anti_rodent.png" alt="Buildings" width="300" >
@@ -512,3 +514,4 @@ function w3_close() {
 
 </body>
 </html>
+

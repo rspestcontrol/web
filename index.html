@@ -9,18 +9,10 @@
 <link rel="stylesheet" href="css/master.css">
 <link rel="stylesheet" href="css/import.css">
 <style>
-.mySlides {display:none}
-.w3-left, .w3-right, .w3-badge {cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
-/* .mySlides {display:none;} */
-/* ////// */
-/* li{
-    list-style-type:none;
-    margin-right:10px;
-    margin-bottom:10px;
-    float:left;
-} */
-/* /////// */
+  .mySlides {display:none}
+  .w3-left, .w3-right, .w3-badge {cursor:pointer}
+  .w3-badge {height:13px;width:13px;padding:0}
+
 </style>
 </head>
 <body>
@@ -147,7 +139,7 @@
   <p>An example of using buttons to indicate how many slides there are in the slideshow, and which slide the user is currently viewing.</p>
 </div> -->
 
-<div class="w3-content w3-display-container" style="max-width:100%; max-height: 70% " >
+<div class="w3-content w3-display-container" style="max-width:100%; max-height: 70% width:auto; " >
   <img class="mySlides w3-animate-fading" src="images/main_home2.png" style="width:100%">
   <img class="mySlides w3-animate-fading" src="images/main_home3.png" style="width:100%">
   <img class="mySlides w3-animate-fading" src="images/main_home1.png" style="width:100%">
@@ -400,8 +392,103 @@ function carousel() {
 </div>
 
 
+<div class="heading">
+  <h1 class= "w3-center">Reviews</h1>
+</div>
+<div class="card-carousel">
+  <div class="my-card">
+    <div class="w3-center reviews">
+      <iframe  src="https://www.youtube.com/embed/W-8sD7npvIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="my-card">
+    <div class="w3-center reviews">
+      <iframe  src="https://www.youtube.com/embed/W-8sD7npvIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="my-card">
+    <div class="w3-center reviews">
+      <iframe  src="https://www.youtube.com/embed/W-8sD7npvIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="my-card">
+    <div class="w3-center reviews">
+      <iframe  src="https://www.youtube.com/embed/W-8sD7npvIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div class="my-card">
+    <div class="w3-center reviews">
+      <iframe  src="https://www.youtube.com/embed/W-8sD7npvIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+  <!-- <div class="my-card"></div>
+  <div class="my-card"></div>
+  <div class="my-card"></div>
+  <div class="my-card"></div> -->
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
+<script>
+$num = $('.my-card').length;
+$even = $num / 2;
+$odd = ($num + 1) / 2;
 
+if ($num % 2 == 0) {
+  $('.my-card:nth-child(' + $even + ')').addClass('active');
+  $('.my-card:nth-child(' + $even + ')').prev().addClass('prev');
+  $('.my-card:nth-child(' + $even + ')').next().addClass('next');
+} else {
+  $('.my-card:nth-child(' + $odd + ')').addClass('active');
+  $('.my-card:nth-child(' + $odd + ')').prev().addClass('prev');
+  $('.my-card:nth-child(' + $odd + ')').next().addClass('next');
+}
+
+$('.my-card').click(function() {
+  $slide = $('.active').width();
+  console.log($('.active').position().left);
+
+  if ($(this).hasClass('next')) {
+    $('.card-carousel').stop(false, true).animate({left: '-=' + $slide});
+  } else if ($(this).hasClass('prev')) {
+    $('.card-carousel').stop(false, true).animate({left: '+=' + $slide});
+  }
+
+  $(this).removeClass('prev next');
+  $(this).siblings().removeClass('prev active next');
+
+  $(this).addClass('active');
+  $(this).prev().addClass('prev');
+  $(this).next().addClass('next');
+});
+
+
+// Keyboard nav
+$('html body').keydown(function(e) {
+  if (e.keyCode == 37) { // left
+    $('.active').prev().trigger('click');
+  }
+  else if (e.keyCode == 39) { // right
+    $('.active').next().trigger('click');
+  }
+});
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<br><br><br><br>
 <!-- Skills Section -->
+
 <div class="w3-container w3-light-grey " style="padding:100px 16px">
   <div class="w3-row-padding">
     <!-- <div class="w3-col m6">
